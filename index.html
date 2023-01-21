@@ -38,7 +38,25 @@
 	  <p>The eighth part shows a person holding a burned earth and a new earth in his left hnad</p>
 <img src="Storyboard_9.jpg" alt="Storyboard Part 9">
 	  <p>The nineth part shows the final setup for zoetrope animation
-	  
+		  
+		  
+		  
+	  <h2>Code for the AdaFruit</h2>
+	  <P>input.buttonA.onEvent(ButtonEvent.Click, function () {
+    crickit.motor1.stop()
+})
+crickit.motor1.stop()
+forever(function () {
+    if (crickit.touch1.touchRead() > 700) {
+        crickit.motor1.run(75)
+    } else if (crickit.touch2.touchRead() > 700) {
+        crickit.motor1.run(100)
+    }
+})
+forever(function () {
+    light.graph(crickit.touch2.touchRead(), 1000)
+})
+</p>
 	  
   </body>
 </html>
